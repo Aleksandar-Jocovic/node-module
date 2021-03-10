@@ -1,0 +1,19 @@
+{
+  "name": "node-module",
+  "version": "1.0.0",
+  "description": "node-module full stack web developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksandar-Jocovic/node-module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksandar-Jocovic/node-module/issues"
+  },
+  "homepage": "https://github.com/Aleksandar-Jocovic/node-module#readme"
+}
