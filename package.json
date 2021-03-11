@@ -4,7 +4,7 @@
   "description": "node-module full stack web developer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Aleksandar-Jocovic/node-module/issues"
   },
-  "homepage": "https://github.com/Aleksandar-Jocovic/node-module#readme"
+  "homepage": "https://github.com/Aleksandar-Jocovic/node-module#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
