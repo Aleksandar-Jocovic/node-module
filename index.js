@@ -41,12 +41,22 @@ const filterAndSortResults = results => {
 	})[0];
 };
 
-let promises = servers.map(server => checkConnection(server));
+exports.findServer = servers => {
+	let promises = servers.map(server => checkConnection(server));
 
-Promise.allSettled(promises).then(results => {
-	new Promise((resolve, reject) => {
-		const finalValue = filterAndSortResults(results);
-		if (finalValue) resolve(finalValue);
-		reject(new Error('All servers are offline'));
+	return Promise.allSettled(promises).then(results => {
+		return new Promise((resolve, reject) => {
+			const finalValue = filterAndSortResults(results);
+
+			if (finalValue) resolve(finalValue);
+
+			reject(new Error('All servers are offline'));
+		});
 	});
-});
+};
+
+// findServer(servers)
+// 	.then(data => console.log('data', data))
+// 	.catch(err => console.log('err', err));
+
+//setTimeout(() => console.log(findServer()), 10000);
